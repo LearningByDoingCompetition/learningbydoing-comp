@@ -558,11 +558,13 @@ class RobotOpenChainArm(System):
             frame_count = self._timestep//2 + 1
             desired_ee_x_ani = desired_ee_x[::2]
             desired_ee_y_ani = desired_ee_y[::2]
+            dt_ani = dt*2.
         else:
             link_cart_pos_hist_ani = link_cart_pos_hist
             frame_count = self._timestep + 1
             desired_ee_x_ani = desired_ee_x
             desired_ee_y_ani = desired_ee_y
+            dt_ani = dt
 
         def animate(i):
             thisx = np.r_[0., link_cart_pos_hist_ani[i][:, 0]]
@@ -578,7 +580,7 @@ class RobotOpenChainArm(System):
             line.set_data(thisx, thisy)
             trace.set_data(history_x, history_y)
             if not hidden:
-                time_text.set_text(time_template % (i*dt))
+                time_text.set_text(time_template % (i*dt_ani))
             ani_out = line, trace, time_text
 
             if draw_traj_trace:
