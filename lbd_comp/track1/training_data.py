@@ -1,11 +1,21 @@
 import numpy as np
-from track1.systems import systems
 import zipfile
+from pathlib import Path
+from tqdm import tqdm
+
+from track1.systems import systems
 
 
-if __name__ == "__main__":
+def generate_training_data(output_dir, output_as_zip=False, force_output=False):
+
+    out_dir_as_path = Path(output_dir)
+    out_dir_as_path.mkdir(
+        parents=True,
+        exist_ok=force_output,
+    )
+
     # iterate over all systems
-    for sysid, system in enumerate(systems):
+    for sysid, system in enumerate(tqdm(systems)):
         kwargs = {
             'parameters': {'noise_sigma': .1},
             'target': np.nan,
@@ -42,13 +52,31 @@ if __name__ == "__main__":
             # impulse control
             S.impulsecontrol(u=u)
 
-            with zipfile.ZipFile('data/track1/CHEM_trainingdata.zip',
-                                 mode='a',
-                                 compression=zipfile.ZIP_DEFLATED
-                                 ) as zfile:
-                zfile.writestr(
-                    f'{S.name}_instance_{repetition:02d}.csv',
-                    S.getDF().to_csv(None,
-                                     float_format='%.6f',
-                                     encoding='utf8',
-                                     index=False))
+            # output instance
+            dataframe = S.getDF()
+            csv_filename = f'{S.name}_instance_{repetition:02d}.csv'
+            write_opts = {
+                'float_format': '%.6f',
+                'encoding': 'utf8',
+                'index': False,
+            }
+            if output_as_zip:
+                zip_path = out_dir_as_path / "training_data.zip"
+                with zipfile.ZipFile(
+                    zip_path,
+                    mode='a',
+                    compression=zipfile.ZIP_DEFLATED,
+                ) as zfile:
+                    zfile.writestr(
+                        csv_filename,
+                        dataframe.to_csv(
+                            None,
+                            **write_opts
+                        )
+                    )
+            else:
+                csv_path = out_dir_as_path / csv_filename
+                dataframe.to_csv(
+                    csv_path,
+                    **write_opts
+                )

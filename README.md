@@ -44,7 +44,7 @@ Congratulations to our competition prize winners! We also thank teams Ajoo, Team
 | Starter kit | ✅ |
 | Training data | ✅ |
 | Prize winner implementations | 🔗 |
-| Training data generation scripts | ⏳ |
+| Training data generation script | ✅ |
 | Intermediate phase evaluation | ❌ |
 | Codalab bundle infrastructure | ❌ |
 | Submission evaluation using Docker | ❌ |
@@ -200,7 +200,11 @@ Duration (seconds): 50.32
 
 ## Track CHEM: Generating Training Data
 
-Stay tuned -- this section will update once we release this part of the code!
+Training data are generated for Track CHEM using the `scripts/gen_chem_training_data.py` script. For example, the following command generates and saves training data to the directory `output/chem_train/` as a zip file (`-z`):
+
+```
+python scripts/gen_chem_training_data.py -o output/chem_train/ -z
+```
 
 ## Track ROBO: Running Controllers
 

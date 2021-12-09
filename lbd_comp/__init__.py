@@ -1,4 +1,4 @@
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 # We add the module path to sys.path
 # This is done so that the top-level modules can be imported easily
