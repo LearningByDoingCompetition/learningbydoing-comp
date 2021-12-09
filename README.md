@@ -43,8 +43,8 @@ Congratulations to our competition prize winners! We also thank teams Ajoo, Team
 | Prize winner submissions | ✅ |
 | Starter kit | ✅ |
 | Training data | ✅ |
-| Prize winner implementations | 🔗 |
 | Training data generation script | ✅ |
+| Prize winner implementations | 🔗 |
 | Intermediate phase evaluation | ❌ |
 | Codalab bundle infrastructure | ❌ |
 | Submission evaluation using Docker | ❌ |
@@ -191,11 +191,10 @@ python scripts/run_chem_evaluation.py -i data/CHEM/prize_winners/1_Ajoo/ -v
 Example output (evaluation time may differ):
 
 ```
-100%|█████████████████████████████████████████████████████████████████████████████| 12/12 [00:50<00:00,  4.19s/it]
+100%|██████████████████████████████████████████████████████████████| 12/12 [00:50<00:00,  4.19s/it]
 Results:
 Loss: 0.0890
 Duration (seconds): 50.32
-
 ```
 
 ## Track CHEM: Generating Training Data
