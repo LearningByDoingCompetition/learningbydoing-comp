@@ -60,8 +60,8 @@ Congratulations to our competition prize winners! We also thank teams Ajoo, Team
 | Training trajectories | ✅ |
 | Target trajectories | ✅ |
 | Oracle controller | ✅ |
-| Training data generation script | ✅ |
-| Test data generation script | ⏳ |
+| Training trajectories generation script | ✅ |
+| Target trajectories generation script | ✅ |
 | Intermediate phase evaluation | ❌ |
 | Codalab bundle infrastructure | ❌ |
 | Controller evaluation using Docker | ❌ |
@@ -236,7 +236,15 @@ Debug animations are informative but increase script runtime. The `-d` argument 
 
 ## Track ROBO: Generating Test Data
 
-Stay tuned -- this section will update once we release this part of the code!
+Track ROBO's test data are generated using the `scripts/gen_robo_test_data.py` script. The following example generates and saves target trajectories to the directory `output/robo_test/` while saving debug animations (`-d`) to `output/robo_test/debug/`:
+
+```
+python scripts/gen_robo_test_data.py -o output/robo_test/ -d
+```
+
+The target trajectories are a mix of curved trajectories, straight-line traversals, circular arcs, rectangular trajectories, and the letters "L", "B", and "D" that spell out the competition!
+
+Similar to the training data script, the debug argument (`-d`) is optional and can be removed to generate the target trajectories more quickly.
 
 # Prize Winner Implementations
 
