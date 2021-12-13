@@ -59,8 +59,9 @@ Congratulations to our competition prize winners! We also thank teams Ajoo, Team
 | Zero baseline controller | ✅ |
 | Training trajectories | ✅ |
 | Target trajectories | ✅ |
-| Oracle controller | ⏳ |
-| Training and test data generation scripts | ⏳ |
+| Oracle controller | ✅ |
+| Training data generation script | ✅ |
+| Test data generation script | ⏳ |
 | Intermediate phase evaluation | ❌ |
 | Codalab bundle infrastructure | ❌ |
 | Controller evaluation using Docker | ❌ |
@@ -222,6 +223,18 @@ Controller-Runtime: 32.5
 ```
 
 ## Track ROBO: Generating Training Data
+
+Training data are generated for Track ROBO using the `scripts/gen_robo_training_data.py` script. For example, the following command generates and saves training trajectories to the directory `output/robo_train/` while saving debug animations (`-d`) to `output/robo_train/debug/`:
+
+```
+python scripts/gen_robo_training_data.py -o output/robo_train/ -d
+```
+
+The script will default to 50 trajectories per robot system, although this setting can be changed through the `-n` argument.
+
+Debug animations are informative but increase script runtime. The `-d` argument is optional and thus doesn't need to be specified in order to generate the training data more quickly.
+
+## Track ROBO: Generating Test Data
 
 Stay tuned -- this section will update once we release this part of the code!
 
