@@ -556,15 +556,17 @@ class RobotOpenChainArm(System):
         if skip_frames:
             link_cart_pos_hist_ani = link_cart_pos_hist[::2]
             frame_count = self._timestep//2 + 1
-            desired_ee_x_ani = desired_ee_x[::2]
-            desired_ee_y_ani = desired_ee_y[::2]
             dt_ani = dt*2.
+            if draw_traj_trace:
+                desired_ee_x_ani = desired_ee_x[::2]
+                desired_ee_y_ani = desired_ee_y[::2]
         else:
             link_cart_pos_hist_ani = link_cart_pos_hist
             frame_count = self._timestep + 1
-            desired_ee_x_ani = desired_ee_x
-            desired_ee_y_ani = desired_ee_y
             dt_ani = dt
+            if draw_traj_trace:
+                desired_ee_x_ani = desired_ee_x
+                desired_ee_y_ani = desired_ee_y
 
         def animate(i):
             thisx = np.r_[0., link_cart_pos_hist_ani[i][:, 0]]
