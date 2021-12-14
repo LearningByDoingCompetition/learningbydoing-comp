@@ -29,7 +29,7 @@ Track ROBO 🤖: `python run_robo_winners.py`
 |---|:---:|:---|
 | Ajoo | 0.918 | 1 🏆 | 
 | TeamQ | 16.121 | 2 |
-| jmunozb | 29.539 | 3 |
+| Factored (jmunozb) | 29.539 | 3 |
 
 Congratulations to our competition prize winners! We also thank teams Ajoo, TeamQ, and KC988 for discussing their solutions at our NeurIPS 2021 session!
 
