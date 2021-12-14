@@ -266,8 +266,8 @@ GuineaPig:
 
 # License
 
-***We will clarify our end license soon!***
+The Learning By Doing NeurIPS 2021 Competition Standalone Code is licensed under the GNU Affero General Public License v3.0 (AGPLv3). Please see the license described in the `LICENSE` file for more information.
 
 # Citation
 
-***We will provide a citable bibtex entry for the LBD soon!***
+***We will provide a citable bibtex entry for the LBD once NeurIPS proceedings have been released!***
