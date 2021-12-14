@@ -270,4 +270,4 @@ The Learning By Doing NeurIPS 2021 Competition Standalone Code is licensed under
 
 # Citation
 
-***We will provide a citable bibtex entry for the LBD once NeurIPS proceedings have been released!***
+***We will provide a citable bibtex entry for the Learning By Doing competition once NeurIPS proceedings have been released!***
