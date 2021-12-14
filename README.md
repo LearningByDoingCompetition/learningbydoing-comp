@@ -258,7 +258,7 @@ Ajoo:
 TeamQ:
 - https://github.com/Quarticai/learning_by_doing_solution
 
-jmunozb:
+Factored (jmunozb):
 - https://github.com/factoredai/learn-by-doing-NeurIPS-2021
 
 GuineaPig:
