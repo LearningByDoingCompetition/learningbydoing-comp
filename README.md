@@ -29,7 +29,7 @@ Track ROBO 🤖: `python run_robo_winners.py`
 |---|:---:|:---|
 | Ajoo | 0.918 | 1 🏆 | 
 | TeamQ | 16.121 | 2 |
-| Factored (jmunozb) | 29.539 | 3 |
+| Factored.ai (jmunozb) | 29.539 | 3 |
 
 Congratulations to our competition prize winners! We also thank teams Ajoo, TeamQ, and KC988 for discussing their solutions at our NeurIPS 2021 session!
 
@@ -258,7 +258,7 @@ Ajoo:
 TeamQ:
 - https://github.com/Quarticai/learning_by_doing_solution
 
-Factored (jmunozb):
+Factored.ai (jmunozb):
 - https://github.com/factoredai/learn-by-doing-NeurIPS-2021
 
 GuineaPig:
