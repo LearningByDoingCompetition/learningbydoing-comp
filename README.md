@@ -270,4 +270,13 @@ The Learning By Doing NeurIPS 2021 Competition Standalone Code is licensed under
 
 # Citation
 
-***We will provide a citable bibtex entry for the Learning By Doing competition once NeurIPS proceedings have been released!***
+```
+@misc{weichwald2022learning,
+      title={{Learning by Doing: Controlling a Dynamical System using Causality, Control, and Reinforcement Learning}}, 
+      author={Sebastian Weichwald and Søren Wengel Mogensen and Tabitha Edith Lee and Dominik Baumann and Oliver Kroemer and Isabelle Guyon and Sebastian Trimpe and Jonas Peters and Niklas Pfister},
+      year={2022},
+      eprint={2202.06052},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+```
